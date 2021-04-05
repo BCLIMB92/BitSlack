@@ -1,0 +1,94 @@
+2021-04-05 15:16:03,565 INFO  [main]  com.atlassian.stash.internal.project Switching to log level [WARN]
+2021-04-05 15:16:03,571 INFO  [main]  c.a.stash.internal.scm.git.command Switching to log level [WARN]
+2021-04-05 15:16:03,571 WARN  [main]  com.atlassian.plugin.util.WaitUntil Switching to log level [INFO]
+2021-04-05 15:16:03,590 INFO  [main]  o.s.boot.SpringApplication 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v1.5.17.RELEASE)
+
+
+2021-04-05 15:16:03,797 INFO  [main]  c.a.b.i.b.BitbucketServerApplication Starting BitbucketServerApplication on SVROLP02279 with PID 26683 (/Users/alexandru.burca/Desktop/bitbucketplugin/target/bitbucket/app/WEB-INF/classes started by alexandru.burca in /Users/alexandru.burca/Desktop/bitbucketplugin)
+2021-04-05 15:16:03,797 INFO  [main]  c.a.b.i.b.BitbucketServerApplication No active profile set, falling back to default profiles: default
+2021-04-05 15:16:04,974 INFO  [main]  c.a.b.i.boot.log.BuildInfoLogger Starting Bitbucket 5.16.0 (c03f0a7 built on Fri Nov 16 06:10:50 EET 2018)
+2021-04-05 15:16:04,974 INFO  [main]  c.a.b.i.boot.log.BuildInfoLogger JVM: Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 15.0.1+9-18
+2021-04-05 15:16:06,819 ERROR [main]  o.a.catalina.core.StandardService Failed to start connector [Connector[HTTP/1.1-7990]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-7990]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:265)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:208)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at com.atlassian.bitbucket.internal.boot.BitbucketServerApplication.start(BitbucketServerApplication.java:247)
+	at com.atlassian.bitbucket.internal.boot.BitbucketServerApplication.main(BitbucketServerApplication.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.WarLauncher.main(WarLauncher.java:59)
+	... 2 frames trimmed
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	... 19 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:550)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:249)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88)
+	... 19 common frames omitted
+2021-04-05 15:16:11,376 INFO  [spring-startup]  c.a.s.internal.home.HomeLockAcquirer Successfully acquired lock on home directory /Users/alexandru.burca/Desktop/bitbucketplugin/target/bitbucket/home
+2021-04-05 15:16:16,469 INFO  [spring-startup]  c.a.s.internal.home.HomeLockAcquirer Successfully acquired lock on home directory /Users/alexandru.burca/Desktop/bitbucketplugin/target/bitbucket/home/shared
+2021-04-05 15:16:18,033 WARN  [spring-startup]  com.hazelcast.instance.Node [192.168.0.248]:5702 [alexandru.burca] [3.7.4-atlassian-43] No join method is enabled! Starting standalone.
+2021-04-05 15:16:18,033 WARN  [spring-startup]  com.hazelcast.instance.Node [192.168.0.248]:5702 [alexandru.burca] [3.7.4-atlassian-43] Config seed port is 5701 and cluster size is 1. Some of the ports seem occupied!
+2021-04-05 15:16:19,211 WARN  [spring-startup]  o.s.w.c.s.XmlWebApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'crowdAliasDao': Unsatisfied dependency expressed through method 'setSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [stash-context.xml]: Cannot resolve reference to bean 'sessionFactoryPrototype' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactoryPrototype' defined in class path resource [stash-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+2021-04-05 15:16:19,217 INFO  [spring-startup]  c.a.s.internal.home.HomeLockAcquirer Releasing lock on /Users/alexandru.burca/Desktop/bitbucketplugin/target/bitbucket/home/shared
+2021-04-05 15:16:19,232 INFO  [spring-startup]  c.a.s.internal.home.HomeLockAcquirer Releasing lock on /Users/alexandru.burca/Desktop/bitbucketplugin/target/bitbucket/home
+2021-04-05 15:16:19,236 ERROR [spring-startup]  c.a.j.s.w.s.JohnsonDispatcherServlet SpringMVC dispatcher [springMvc] could not be started
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'crowdAliasDao': Unsatisfied dependency expressed through method 'setSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [stash-context.xml]: Cannot resolve reference to bean 'sessionFactoryPrototype' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactoryPrototype' defined in class path resource [stash-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:664)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	... 18 frames trimmed
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [stash-context.xml]: Cannot resolve reference to bean 'sessionFactoryPrototype' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactoryPrototype' defined in class path resource [stash-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	... 5 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactoryPrototype' defined in class path resource [stash-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1631)
+	... 5 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.<init>(XmlMappingBinderAccess.java:43)
+	at org.hibernate.boot.MetadataSources.<init>(MetadataSources.java:87)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.getMetadataSources(LocalSessionFactoryBean.java:364)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:399)
+	... 5 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435)
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94)
+	... 9 common frames omitted
+2021-04-05 15:16:19,297 ERROR [main]  o.s.b.d.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 7990 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 7990, or configure this application to listen on another port.
+
+2021-04-05 15:16:19,302 INFO  [main]  c.a.b.i.boot.log.BuildInfoLogger Bitbucket 5.16.0 has shut down
