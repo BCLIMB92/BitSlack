@@ -1,14 +1,13 @@
-<atlassian-plugin key="${project.groupId}.${project.artifactId}-tests" name="${project.name}" plugins-version="2">
+<atlassian-plugin key="com.mycompany.bitbucket.is-admin-merge-check-tests" name="Bitbucket Server Examples - Repository Merge Checks" plugins-version="2">
     <plugin-info>
-        <description>${project.description}</description>
-        <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <description>This is the com.mycompany.bitbucket:is-admin-merge-check plugin for Atlassian Bitbucket Server.</description>
+        <version>1.0.0-SNAPSHOT</version>
+        <vendor name="Example Company" url="http://www.example.com/" />
     </plugin-info>
 
-    <!-- from our base plugin -->
-    <component-import key="myComponent" interface="com.atlassian.tutorial.myPlugin.api.MyPluginComponent"/>
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="is-admin-merge-check"/>
 
-    <!-- from the product container -->
-    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    <repository-merge-check key="isAdmin" class="bean:isAdminMergeCheck" configurable="false"/>
     
 </atlassian-plugin>

@@ -5,10 +5,9 @@
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
     </plugin-info>
 
-    <!-- from our base plugin -->
-    <component-import key="myComponent" interface="com.atlassian.tutorial.myPlugin.api.MyPluginComponent"/>
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="is-admin-merge-check"/>
 
-    <!-- from the product container -->
-    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    <repository-merge-check key="isAdmin" class="bean:isAdminMergeCheck" configurable="false"/>
     
 </atlassian-plugin>

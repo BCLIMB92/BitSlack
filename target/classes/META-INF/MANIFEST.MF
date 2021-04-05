@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Atlassian-Build-Date: 2021-04-05T16:01:00+0300
+Atlassian-Plugin-Key: com.mycompany.bitbucket.is-admin-merge-check
+Bnd-LastModified: 1617627661349
+Build-Jdk: 1.8.0_242-release
+Built-By: alexandru.gherghina
+Bundle-Description: This is the com.mycompany.bitbucket:is-admin-merge-c
+ heck plugin for Atlassian Bitbucket Server.
+Bundle-DocURL: http://www.example.com/
+Bundle-ManifestVersion: 2
+Bundle-Name: Bitbucket Server Examples - Repository Merge Checks
+Bundle-SymbolicName: com.mycompany.bitbucket.is-admin-merge-check
+Bundle-Vendor: Example Company
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.mycompany.bitbucket.merge.checks.api;version="1.0.0"
+Import-Package: org.springframework.osgi.context;resolution:=optional,or
+ g.springframework.osgi.service.exporter.support;resolution:=optional,or
+ g.springframework.osgi.service.importer.support;resolution:=optional,or
+ g.eclipse.gemini.blueprint.context;resolution:=optional,org.eclipse.gem
+ ini.blueprint.service.exporter;resolution:=optional,org.eclipse.gemini.
+ blueprint.service.exporter.support;resolution:=optional,org.eclipse.gem
+ ini.blueprint.service.importer.support;resolution:=optional,com.atlassi
+ an.bitbucket.hook.repository,com.atlassian.bitbucket.i18n,com.atlassian
+ .bitbucket.permission,com.atlassian.bitbucket.pull,com.atlassian.bitbuc
+ ket.repository,com.atlassian.plugin.osgi.factory,com.google.common.base
+ ,com.google.common.collect,javax.annotation,org.apache.commons.lang,org
+ .apache.commons.logging,org.osgi.framework,org.springframework.aop.supp
+ ort,org.springframework.beans,org.springframework.beans.factory,org.spr
+ ingframework.beans.factory.annotation,org.springframework.beans.factory
+ .config,org.springframework.beans.factory.parsing,org.springframework.b
+ eans.factory.support,org.springframework.beans.factory.xml,org.springfr
+ amework.context.annotation,org.springframework.core.io,org.springframew
+ ork.stereotype,org.springframework.util,org.w3c.dom
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Spring-Context: *
+Tool: Bnd-2.4.1.201501161923

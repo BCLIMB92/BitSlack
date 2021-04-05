@@ -1,3 +1,1 @@
-/Users/alexandru.burca/Desktop/bitbucketplugin/src/main/java/com/atlassian/tutorial/myPlugin/config/MyPluginJavaConfig.java
-/Users/alexandru.burca/Desktop/bitbucketplugin/src/main/java/com/atlassian/tutorial/myPlugin/api/MyPluginComponent.java
-/Users/alexandru.burca/Desktop/bitbucketplugin/src/main/java/com/atlassian/tutorial/myPlugin/impl/MyPluginComponentImpl.java
+/Users/alexandru.gherghina/work/BitSlack/src/main/java/com/atlassian/tutorial/myplugin/impl/IsAdminMergeCheck.java
